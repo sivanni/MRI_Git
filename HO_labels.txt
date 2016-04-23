@@ -1,0 +1,96 @@
+0, 63, 86, 49,  Left Frontal Pole   
+1, 21, 86, 33,  Right Frontal Pole   
+2, 64, 69, 32,  Left Insular Cortex   
+3, 26, 70, 32,  Right Insular Cortex   
+4, 47, 75, 66,  Left Superior Frontal Gyrus   
+5, 43, 80, 61,  Right Superior Frontal Gyrus   
+6, 65, 78, 55,  Left Middle Frontal Gyrus   
+7, 26, 77, 59,  Right Middle Frontal Gyrus   
+8, 72, 77, 41,  Left Inferior Frontal Gyrus; pars triangularis   
+9, 17, 77, 38,  Right Inferior Frontal Gyrus; pars triangularis   
+10, 73, 70, 42,  Left Inferior Frontal Gyrus; pars opercularis   
+11, 16, 71, 43,  Right Inferior Frontal Gyrus; pars opercularis   
+12, 73, 62, 56,  Left Precentral Gyrus   
+13, 14, 65, 50,  Right Precentral Gyrus   
+14, 57, 67, 19,  Left Temporal Pole   
+15, 33, 68, 19,  Right Temporal Pole   
+16, 74, 63, 32,  Left Superior Temporal Gyrus; anterior division   
+17, 15, 64, 32,  Right Superior Temporal Gyrus; anterior division   
+18, 78, 51, 37,  Left Superior Temporal Gyrus; posterior division   
+19, 11, 52, 38,  Right Superior Temporal Gyrus; posterior division   
+20, 75, 62, 24,  Left Middle Temporal Gyrus; anterior division   
+21, 15, 63, 22,  Right Middle Temporal Gyrus; anterior division   
+22, 78, 46, 31,  Left Middle Temporal Gyrus; posterior division   
+23, 11, 54, 29,  Right Middle Temporal Gyrus; posterior division   
+24, 77, 37, 35,  Left Middle Temporal Gyrus; temporooccipital part   
+25, 12, 40, 36,  Right Middle Temporal Gyrus; temporooccipital part   
+26, 69, 61, 15,  Left Inferior Temporal Gyrus; anterior division   
+27, 21, 63, 15,  Right Inferior Temporal Gyrus; anterior division   
+28, 70, 45, 23,  Left Inferior Temporal Gyrus; posterior division   
+29, 17, 54, 20,  Right Inferior Temporal Gyrus; posterior division   
+30, 73, 37, 25,  Left Inferior Temporal Gyrus; temporooccipital part   
+31, 16, 37, 26,  Right Inferior Temporal Gyrus; temporooccipital part   
+32, 77, 57, 50,  Left Postcentral Gyrus   
+33, 12, 58, 46,  Right Postcentral Gyrus   
+34, 62, 39, 69,  Left Superior Parietal Lobule   
+35, 28, 40, 69,  Right Superior Parietal Lobule   
+36, 75, 46, 57,  Left Supramarginal Gyrus; anterior division   
+37, 13, 50, 56,  Right Supramarginal Gyrus; anterior division   
+38, 74, 39, 56,  Left Supramarginal Gyrus; posterior division   
+39, 13, 43, 50,  Right Supramarginal Gyrus; posterior division   
+40, 74, 35, 47,  Left Angular Gyrus   
+41, 15, 37, 46,  Right Angular Gyrus   
+42, 67, 24, 52,  Left Lateral Occipital Cortex; superior division   
+43, 19, 30, 51,  Right Lateral Occipital Cortex; superior division   
+44, 71, 26, 36,  Left Lateral Occipital Cortex; inferior division   
+45, 18, 29, 36,  Right Lateral Occipital Cortex; inferior division   
+46, 49, 25, 42,  Left Intracalcarine Cortex   
+47, 39, 27, 41,  Right Intracalcarine Cortex   
+48, 46, 85, 26,  Left Frontal Medial Cortex   
+49, 44, 84, 27,  Right Frontal Medial Cortex   
+50, 46, 60, 64,  Left Juxtapositional Lobule Cortex (formerly Supplementary Motor Cortex)   
+51, 43, 63, 65,  Right Juxtapositional Lobule Cortex (formerly Supplementary Motor Cortex)   
+52, 47, 75, 31,  Left Subcallosal Cortex   
+53, 44, 74, 31,  Right Subcallosal Cortex   
+54, 47, 81, 52,  Left Paracingulate Gyrus   
+55, 43, 84, 49,  Right Paracingulate Gyrus   
+56, 46, 81, 41,  Left Cingulate Gyrus; anterior division   
+57, 43, 81, 42,  Right Cingulate Gyrus; anterior division   
+58, 46, 45, 52,  Left Cingulate Gyrus; posterior division   
+59, 43, 46, 54,  Right Cingulate Gyrus; posterior division   
+60, 46, 33, 58,  Left Precuneous Cortex   
+61, 43, 36, 60,  Right Precuneous Cortex   
+62, 46, 21, 52,  Left Cuneal Cortex   
+63, 43, 22, 49,  Right Cuneal Cortex   
+64, 53, 69, 26,  Left Frontal Orbital Cortex   
+65, 34, 76, 26,  Right Frontal Orbital Cortex   
+66, 54, 61, 21,  Left Parahippocampal Gyrus; anterior division   
+67, 35, 62, 20,  Right Parahippocampal Gyrus; anterior division   
+68, 55, 49, 25,  Left Parahippocampal Gyrus; posterior division   
+69, 35, 47, 28,  Right Parahippocampal Gyrus; posterior division   
+70, 53, 39, 32,  Left Lingual Gyrus   
+71, 36, 41, 31,  Right Lingual Gyrus   
+72, 60, 62, 14,  Left Temporal Fusiform Cortex; anterior division   
+73, 30, 62, 14,  Right Temporal Fusiform Cortex; anterior division   
+74, 61, 46, 24,  Left Temporal Fusiform Cortex; posterior division   
+75, 27, 49, 23,  Right Temporal Fusiform Cortex; posterior division   
+76, 61, 37, 27,  Left Temporal Occipital Fusiform Cortex   
+77, 27, 39, 26,  Right Temporal Occipital Fusiform Cortex   
+78, 58, 27, 29,  Left Occipital Fusiform Gyrus   
+79, 31, 27, 29,  Right Occipital Fusiform Gyrus   
+80, 63, 72, 40,  Left Frontal Operculum Cortex   
+81, 25, 73, 38,  Right Frontal Operculum Cortex   
+82, 66, 58, 43,  Left Central Opercular Cortex   
+83, 22, 57, 43,  Right Central Opercular Cortex   
+84, 67, 47, 45,  Left Parietal Operculum Cortex   
+85, 23, 50, 46,  Right Parietal Operculum Cortex   
+86, 67, 61, 29,  Left Planum Polare   
+87, 23, 63, 28,  Right Planum Polare   
+88, 66, 51, 42,  Left Heschl's Gyrus (includes H1 and H2)   
+89, 24, 53, 41,  Right Heschl's Gyrus (includes H1 and H2)   
+90, 66, 46, 41,  Left Planum Temporale   
+91, 22, 48, 43,  Right Planum Temporale   
+92, 45, 22, 41,  Left Supracalcarine Cortex   
+93, 43, 24, 44,  Right Supracalcarine Cortex   
+94, 50, 13, 33,  Left Occipital Pole   
+95, 37, 12, 38,  Right Occipital Pole   

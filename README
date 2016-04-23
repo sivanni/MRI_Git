@@ -1,0 +1,36 @@
+-------------------------------------------------------------------------------------------
+
+Resting state fMRI analysis pipeline
+
+Hanna Halme, 2015
+Questions/comments: hanna.halme@hus.fi
+
+-------------------------------------------------------------------------------------------
+
+Folders:
+
+Pilot_data: data and results from healthy participants
+Pilot_data/Preprocessed: preprocessed anatomical and functional data
+Pilot_data/Drifter_SVR: SVR results from data filtered with DRIFTER
+Pilot_data/FIX_SVR: SVR results from data filtered with FSL FIX
+results: Result folder for new patients
+DRIFTER-toolbox: scripts for running DRIFTER
+
+Scripts:
+
+preprocess_anatomical_data.py: anatomical preprocessing only
+preprocess_functional_data.py: functional preprocessing only
+SVR_3D.py: SVR analysis for preprocessed fMRI files
+calculate_ROI_stats.py: comparison of SVR results to healthy participants' results and visualization
+run_pipeline_all.py: all previous combined in one pipeline
+correct_physsig.m: Matlab script for removing time stamps from physiological signal files
+
+NIFTI files:
+
+MNI152_T1_2mm_brain.nii.gz: MNI152 standard brain
+MNI152_T1_2mm_brain_mask_dil.nii.gz: mask derived from previous
+HarvardOxford-cortl-maxprob-thr25-2mm.nii.gz: atlas with 96 regions of interest (ROI)
+cc200_roi_atlas.nii.gz: atlas with 200 ROIs
+cc200_MNI-nii.gz: atlas with 200 ROIs in MNI152 standard space
+
+
