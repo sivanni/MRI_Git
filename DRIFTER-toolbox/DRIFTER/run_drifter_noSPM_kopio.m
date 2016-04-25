@@ -1,6 +1,5 @@
 function Data = run_drifter_noSPM_kopio(fMRI,ref_data_puls,ref_data_resp)
 
-    addpath('/opt/MATLAB/NIfTI_20140122/')
           
     fmri = load_untouch_nii(fMRI);
     obs_data = double(fmri.img);
@@ -22,8 +21,9 @@ function Data = run_drifter_noSPM_kopio(fMRI,ref_data_puls,ref_data_resp)
     refdata{2}.downdt = 0.1;
 
     if exist(ref_data_puls, 'file') == 2
-        puls = load(ref_data_puls);
-        puls = puls.sig;
+        puls = load(ref_data_puls);%struct
+        fields = fieldnames(puls);
+        puls = puls.(fields{1});
     	refdata{1}.data = puls;
     	%refdata{1}.poverall = 0.1;
     else
@@ -32,7 +32,8 @@ function Data = run_drifter_noSPM_kopio(fMRI,ref_data_puls,ref_data_resp)
         
     if exist(ref_data_resp, 'file') == 2
         resp = load(ref_data_resp);
-        resp = resp.sig;
+        fields = fieldnames(resp);
+        resp = resp.(fields{1});
     	refdata{2}.data = resp; 
     	%refdata{2}.poverall = 0.1;
     else
