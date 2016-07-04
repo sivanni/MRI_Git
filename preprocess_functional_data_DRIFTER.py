@@ -41,7 +41,7 @@ import glob
 #########################################################################################
 
 data_path = '/opt/MR_data/Silja_Raty/Revis_0007_rs/Functional_scans/'
-results_path = '/opt/MR_data/Silja_Raty/Revis_0007_rs/Results/Functional/'
+results_path = '/opt/MR_data/Silja_Raty/Revis_0007_rs/Results/Functional/data2/'
 
 subj_dirs = os.listdir(data_path)
 
@@ -50,16 +50,15 @@ for data in (['func1','func2']):
 	os.chdir(results_path)
 
 	# Define input files: 2xfMRI + 1xMPRAGE
-	func1 = data_path +  '/sessio1_a/epi.nii.gz'
-	func2 = data_path + '/sessio1_b/epi.nii.gz'
-	anat = glob.glob(results_path + '/anat/skullstrip/*.nii.gz')
-
+	func1 = data_path +  '/sessio2_a/epi.nii.gz'
+	func2 = data_path + '/sessio2_b/epi.nii.gz'
+	anat = '/opt/MR_data/Silja_Raty/Revis_0007_rs/Results/00002_session2/anat/nonlinear_reg/anat_LR_warp_reoriented_skullstrip_warped.nii.gz'
 
 	# Physiological signal files
-	physsig1 = '/opt/MR_data/Silja_Raty/Revis_0007_rs/Biopac/1.sessio/pulse_fMRI1.mat'
-	physsig2 = '/opt/MR_data/Silja_Raty/Revis_0007_rs/Biopac/1.sessio/resp_fMRI1.mat'
-	physsig3 = '/opt/MR_data/Silja_Raty/Revis_0007_rs/Biopac/1.sessio/pulse_fMRI2.mat'
-	physsig4 = '/opt/MR_data/Silja_Raty/Revis_0007_rs/Biopac/1.sessio/resp_fMRI2.mat'
+	physsig1 = '/opt/MR_data/Silja_Raty/Revis_0007_rs/Biopac/2.sessio/pulse_fMRI1.mat'
+	physsig2 = '/opt/MR_data/Silja_Raty/Revis_0007_rs/Biopac/2.sessio/resp_fMRI1.mat'
+	physsig3 = '/opt/MR_data/Silja_Raty/Revis_0007_rs/Biopac/2.sessio/pulse_fMRI2.mat'
+	physsig4 = '/opt/MR_data/Silja_Raty/Revis_0007_rs/Biopac/2.sessio/resp_fMRI2.mat'
 
 
 	#Initialize workflows
@@ -118,7 +117,7 @@ for data in (['func1','func2']):
 	print "Running DRIFTER..."
 	script="run_drifter_noSPM_kopio('%s','%s','%s')" %  (infile, physsig_a, physsig_b)
 	MatlabCommand.set_default_paths(['/opt/Laskenta/Control_Room/Biomedicum/DRIFTER-toolbox/DRIFTER/', '/opt/MATLAB/R2015a/spm8/','/opt/MATLAB/NIfTI_20140122/'])
-	mlab = MatlabCommand(script=script, mfile=True, paths='/opt/Laskenta/Control_Room/Biomedicum/DRIFTER-toolbox/DRIFTER', terminal_output = "stream")
+	mlab = MatlabCommand(script=script, mfile=True, paths=['/opt/Laskenta/Control_Room/Biomedicum/DRIFTER-toolbox/DRIFTER/', '/opt/MATLAB/R2015a/spm8/','/opt/MATLAB/NIfTI_20140122/'], terminal_output = "stream")
 
 	try:
 		os.stat(results_path + data + '_1/drifter/drifter_corrected.nii.gz')
@@ -169,14 +168,14 @@ for data in (['func1','func2']):
 	# Transform mean functional image
 	warpmean = pe.Node(interface=fsl.ApplyWarp(), name='warpmean')
 	warpmean.inputs.ref_file = '/usr/share/fsl/5.0/data/standard/MNI152_T1_2mm_brain.nii.gz'
-	warpmean.inputs.field_file = glob.glob(results_path+'/anat/nonlinear_reg/*_skullstrip_fieldwarp.nii.gz')
+	warpmean.inputs.field_file = '/opt/MR_data/Silja_Raty/Revis_0007_rs/Results/00002_session2/anat/nonlinear_reg/anat_LR_warp_reoriented_skullstrip_fieldwarp.nii.gz'
 	workflow2.connect(tstat2, 'out_file', warpmean, 'in_file')
 	workflow2.connect(mean2anat, 'out_matrix_file', warpmean, 'premat')
 
 	# Transform all images
 	warpall = pe.Node(interface=fsl.ApplyWarp(), name='warpall')
 	warpall.inputs.ref_file = '/usr/share/fsl/5.0/data/standard/MNI152_T1_2mm_brain.nii.gz'
-	warpall.inputs.field_file = results_path+'/anat/nonlinear_reg/t1_mpr_sag_p2_iso_warp_reoriented_skullstrip_fieldwarp.nii.gz'
+	warpall.inputs.field_file = '/opt/MR_data/Silja_Raty/Revis_0007_rs/Results/00002_session2/anat/nonlinear_reg/anat_LR_warp_reoriented_skullstrip_fieldwarp.nii.gz'
 	workflow2.connect(intnorm, 'out_file', warpall, 'in_file')
 	workflow2.connect(mean2anat, 'out_matrix_file', warpall, 'premat')
 	workflow2.connect(warpall, 'out_file', outputnode2, 'result_func')

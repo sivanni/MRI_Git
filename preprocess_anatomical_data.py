@@ -43,7 +43,7 @@ for k in range(0,len(subj_dirs)):
 
 	if os.path.isfile(data_path + subj_dirs[k] + '/anat_HR.nii.gz'):
 	    anat = data_path + subj_dirs[k] + '/anat_HR.nii.gz'
-	elif:
+	elif os.path.isfile(data_path + subj_dirs[k] + '/anat_LR.nii.gz'):
 	    anat = data_path + subj_dirs[k] + '/anat_LR.nii.gz'
 	else:
 	    print "No anatomical images found!"
